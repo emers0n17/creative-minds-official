@@ -1,0 +1,29 @@
+#equipe {
+    background-color: #f8f9fa;
+}
+
+#equipe .text-primary {
+    color: #007bff !important;
+}
+
+#equipe img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 5px solid #007bff;
+    transition: transform 0.3s ease;
+}
+
+#equipe img:hover {
+    transform: scale(1.05);
+}
+
+#equipe h5 {
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+#equipe p {
+    margin-bottom: 20px;
+    font-weight: bold;
+}

@@ -1,120 +1,148 @@
-// import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css'
-import './home.css'
-import logo from "../../assets/logo.jpg";
-
-function Menu_start() {
-  return (
-    <>
-      <nav id="navbar" className="navbar navbar-expand-lg navbar-dark">
-        <a id="navbar-brand" className="navbar-brand" href="#">
-          <img src={logo} alt="" />
-        </a>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span id="navbar-toggler-icon" className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ms-auto">
-            <li className="nav-item">
-              <a className="nav-link" aria-current="page" href="#sobre">
-                Inicio
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" aria-current="page" href="#sobre">
-                Servicos
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" aria-current="page" href="#sobre">
-                Trabalhos
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" aria-current="page" href="#sobre">
-                Equipe
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" aria-current="page" href="#sobre">
-                Planos
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" aria-current="page" href="#sobre">
-                Contactos
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </>
-  );
-}
-
-function Cube1(){
-  return (
-    <>
-      <div className="cube1-content">
-
-      </div>
-    </>
-  )
-}
-
-function Cube2(){
-  return (
-    <>
-      <div className="cube2-content">
-
-      </div>
-    </>
-  )
-}
+import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import "./home.css";
+import Menu from "./menu";
+import '../../../node_modules/jquery';
+import '../../../node_modules/bootstrap/dist/js/bootstrap.min.js';
+import { useEffect, useMemo, useState } from "react";
+import Particles, { initParticlesEngine } from "@tsparticles/react";
+import { loadSlim } from "@tsparticles/slim";
 
 function Content_start() {
   return (
     <>
-      <div className="content_start">
-        <div className="content_start-cube1">
-          <Cube1 />
+      <div id="container-start-home" className="row container-start-home">
+        <div style={{display: 'flex', justifyContent: 'center'}} className="col-sm-12">
+          <Apresentacao_start />
         </div>
-        <div className="content_start-cube2">
-        <Cube2 />
-        </div>
-        <div className="content_start-border"></div>
       </div>
     </>
   );
 }
 
+const App = () => {
+  // eslint-disable-next-line no-unused-vars
+  const [init, setInit] = useState(false);
+
+  useEffect(() => {
+    initParticlesEngine(async (engine) => {
+      await loadSlim(engine);
+    }).then(() => {
+      setInit(true);
+    });
+  }, []);
+
+  const particlesLoaded = (container) => {
+    console.log(container);
+  };
+
+  const options = useMemo(
+    () => ({
+      background: {
+        color: {
+          value: 'transparent',
+        },
+      },
+      fpsLimit: 120,
+      interactivity: {
+        events: {
+          onClick: {
+            enable: true,
+            mode: 'repulse',
+          },
+          onHover: {
+            enable: true,
+            mode: 'grab',
+          },
+        },
+        modes: {
+          push: {
+            distance: 200,
+            duration: 15,
+          },
+          grab: {
+            distance: 150,
+          },
+        },
+      },
+      particles: {
+        color: {
+          value: '#000000',
+        },
+        links: {
+          color: '#000000',
+          distance: 150,
+          enable: true,
+          opacity: 0.6,
+          width: 1,
+        },
+        move: {
+          direction: 'none',
+          enable: true,
+          outModes: {
+            default: 'bounce',
+          },
+          random: true,
+          speed: 2,
+          straight: false,
+        },
+        number: {
+          density: {
+            enable: true,
+          },
+          value: 150,
+        },
+        opacity: {
+          value: 1,
+        },
+        shape: {
+          type: 'triangle',
+        },
+        size: {
+          value: { min: 3, max: 5 },
+        },
+      },
+      detectRetina: true,
+    }),
+    []
+  );
+  
+
+  return (
+    <>
+    <Particles
+        id="tsparticles"
+        particlesLoaded={particlesLoaded}
+        options={options}
+        style={{ width: '100%',height: '100%' }} // Ensure the particles fit the container
+      />
+    </>
+  );
+};
+
 function Apresentacao_start() {
   return (
     <>
-      <div className="apresentation-start">
-          <h1>
-            Design, Criacao e Gerenciamento do seu site
-          </h1>
-          <p>
-            Fornecemos serviços de criação, gerenciamento de sites e fornecemos tambem serviçõs de design.</p>
+      <div className="container-ms apresentation-start">
+      <App />
+        <div style={{
+          height: '200px',
+        }} className="container-fluid">
+        <h1>Design, Criacao e Gerenciamento de sites?</h1>
+        <p>
+          Você esta no lugar certo, aqui nos iremos dar a acessoria necessaria
+          para que você dê os seus primeiros passos na internet.
+        </p>
         </div>
+      </div>
     </>
-  )
+  );
 }
 
 function Home() {
   return (
     <>
-      <header className="header">
-        <Menu_start />
-        <Apresentacao_start />
+      <header className="container-fluid home-header">
+        <Menu />
         <Content_start />
       </header>
     </>
