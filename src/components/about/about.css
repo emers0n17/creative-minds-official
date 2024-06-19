@@ -1,9 +1,101 @@
 #sobre-nos {
-    background-color: #f8f9fa;
+    background-color: rgb(172, 84, 255);
+}
+
+#container {
+    background-color: white;
+    box-shadow: 0 0 2px black;
+    border-radius: 5px;
 }
 
 #sobre-nos .text-primary {
     color: #007bff !important;
+}
+
+#description {
+    position: relative;
+    user-select: none;
+}
+
+#description::after {
+    content: '';
+    height: 96%;
+    width: 8px;
+    margin: 2% 5px;
+    background-image: linear-gradient(to bottom, purple, violet, yellow);
+    position: absolute;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    z-index: 0;
+    top: 0;
+    right: 0;
+}
+
+#description p{
+    box-shadow: 0 0 5px rgb(0, 0, 0, 0.4);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    text-align: justify;
+}
+
+#description h2 {
+    text-align: center;
+    margin-top: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 900;
+}
+
+#description p:nth-child(3),
+#description p:nth-child(5){
+    background-color: white;
+    border-bottom: 1px solid crimson;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+#description p:nth-child(2),
+#description p:nth-child(4){
+    background-color: #0478b1ff;
+    color: white;
+    border-bottom: 1px solid rgb(0, 106, 255);
+    margin-right: 20px;
+    position: relative;
+}
+
+#description p:nth-child(2)::after,
+#description p:nth-child(4)::after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    /* box-shadow: 0 0 20px #0478b1ff;
+    color: white; */
+    border-radius: 100%;
+    background-color: #0478b1ff;
+    color: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    position: absolute;
+    right: -31.5px;
+    z-index: 1;
+    top: calc(50% - 10px);
+}
+
+#description p:nth-child(2)::before,
+#description p:nth-child(4)::before {
+    content: '';
+    width: 20px;
+    height: 10px;
+    background-color: #0478b1ff;
+    color: white;
+    z-index: 2;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    position: absolute;
+    right: -20px;
+    z-index: 1;
+    top: calc(50% - 5px);
 }
 
 #sobre-nos p {
@@ -12,13 +104,13 @@
 }
 
 #sobre-nos img {
-    border: 5px solid #007bff;
     transition: transform 0.3s ease;
+    max-width: 100% ;
 }
 
-#sobre-nos img:hover {
+/* #sobre-nos img:hover {
     transform: scale(1.05);
-}
+} */
 
 #sobre-nos .btn-primary {
     background-color: #007bff;

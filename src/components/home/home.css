@@ -14,12 +14,14 @@
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     height: auto;
     /* background-color: rgb(40, 42, 53); */
+    background-color:  rgb(172, 84, 255);
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 0 !important;
     min-height: 100vh;
 }
+
 
 /* Menu de navegacao */
 #navbar {
@@ -29,6 +31,7 @@
     height: 70px;
     border-bottom: 1px solid grey;
     position: relative;
+    z-index: 2;
 }
 
 
@@ -112,7 +115,8 @@
 
 /* Conteiner de apresentacao */
 #container-start-home {
-    background-color: #ff073dff;
+    /* background-color: #ff073dff; */
+    background-image: linear-gradient(to bottom, orangered, crimson, rgb(172, 84, 255));
     height: 700px;
     display: flex;
     align-items: center;

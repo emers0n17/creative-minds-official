@@ -1,169 +1,138 @@
-.card-servicos {
-    position: relative;
-    height: 200px;
-    background: linear-gradient(145deg, black, #131316);
-    border-radius: 8px;
-    overflow: hidden;
-    user-select: none;
+#row {
+    background-color:white;
 }
 
-.card-servicos .content {
-    padding: 20px;
-    text-align: center;
-    transition: 0.5s;
-    display: grid;
-    height: 100%;
-    grid-template-rows: 150px 150px 50px;
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    border-radius: 8px;
-    row-gap: 10px;
-}
-
-.col-sm-6 {
-    background-color: orangered;
-    color: white;
-}
-
-.card-servicos .content .content-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.card-servicos .content .content-header .content-header-image {
-    width: 170px;
-    height: 160px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(145deg, #131316, #130F40, rgb(97, 47, 138));
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 8px;
-}
-
-.card-servicos .content .content-header .content-header-image img {
-    width: 130px;
-    border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    height: auto;
-}
-
-.card-servicos .content .content-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-left: 35px;
-}
-
-.card-servicos .content .content-content h1 {
-    text-align: justify;
-    color: white;
-    width: 100%;
-    font-size: large;
-}
-
-.card-servicos .content .content-content p {
-    text-align: justify;
-    width: 100%;
-    font-size: 12px;
-    color: rgb(190, 190, 190);
-    padding-right: 20px;
-}
-
-.card-servicos .content .content-footer button {
-    width: 150px;
-    background-color: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    color: white;
-    font-size: small;
-    height: 30px;
-    border-radius: 6px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 100;
-    background: linear-gradient(170deg, #131316, #130F40);
-    transition: 0.3s;
-}
-
-.card-servicos .content .content-footer button:hover {
-    transform: scale(1.05);
-}
-
-.texto-header-servicos {
-    margin-top: 100px;
-}
-
-.texto-header-servicos h1 {
+#row h1 {
     color: black;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
 }
 
-.texto-header-servicos p {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    color: rgb(94, 94, 94);
+#row p {
+    color: black;
 }
 
-#textDescription {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    font-size: large;
-    padding: 20px;
-    line-height: 1.5;
-    border-radius: 5px;
+#container-fluid {
+    background-image: linear-gradient(to bottom, rgb(172, 84, 255), purple);
+}
+
+#container-fluid-hedaer {
     min-height: 200px;
-}
-
-#textPreco {
-    height: 180px;
-    padding: 10px 0;
-}
-
-.cardPreco1, .cardPreco2 {
-    height: 100%;
-    border-radius: 5px;
+    background-color: #0478b1ff;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-top: 1px solid rgba(0, 0, 0, 0.4);
+    border-left: 1px solid rgba(0, 0, 0, 0.4);
+    border-right: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+#cards-container {
+    border-left: 1px solid rgba(0, 0, 0, 0.4);
+    border-right: 1px solid rgba(0, 0, 0, 0.4);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    overflow: hidden;
+}
+
+#container-fluid-hedaer h1,
+#container-fluid-hedaer p {
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#container-fluid-hedaer h1 {
+    font-weight: 900;
+}
+
+#container-fluid-hedaer p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+#prices {
+    border: none !important;
+}
+
+#prices-desc {
+    height: auto;
+    min-height: 50px;
+    display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
-    user-select: none;
-    transition: 0.3s;
+    padding:  0!important;
+    align-items: center;
+    box-shadow: 0 0 2px black;
+    margin: 5px;
+    border-radius: 5px;
+    /* background-image: linear-gradient(150deg, rgb(144, 0, 255), rgb(255, 0, 106)); */
+    background-color: #ff735cff;
 }
 
-.cardPreco1 {
-    background-color: white;
-}
-
-.cardPreco2 {
-    background-color: orangered;
+#prices-desc a {
     color: white;
+    font-size: 18px;
+    margin: 5px 0;
 }
 
-.cardPreco1 h1, .cardPreco2 h1 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.cardPreco1 p, .cardPreco2 p {
+#card-header {
+    font-weight: 900;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    text-align: end;
     font-size: x-large;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 700;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.cardPreco1:hover, .cardPreco2:hover {
-    transform: scale(1.04);
-    margin-bottom: 10px;
-    cursor: pointer;
-}
-
-.cardPreco1:hover {
-    background-color: #ff073d;
+#prices-desc p {
     color: white;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.2);
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    min-width: 50%;
+    padding: 0 10px;
 }
 
-.cardPreco2:hover {
-    background-color: white;
-    color: black;
+#containerImagen {
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: 100%;
+    max-height: 80% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#text-description {
+    width: 100%;
+    min-height: 150px;
+    line-height: 1.5;
+    background-color: #ff735cff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    color: white !important;
+    text-align: justify;
+}
+
+@media screen and (max-width: 700px) {
+    #prices-desc {
+        height: auto;
+        min-height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding:  0!important;
+        align-items: center;
+        box-shadow: 0 0 2px black;
+        margin: 5px;
+        border-radius: 5px;
+        /* background-image: linear-gradient(150deg, rgb(144, 0, 255), rgb(255, 0, 106)); */
+        background-image: linear-gradient(150deg, rgb(78, 1, 138), rgb(140, 0, 255));
+    }
 }

@@ -5,18 +5,17 @@ import './footer.css';
 
 const Footer = () => {
     return (
-        <footer className="bg-dark text-white py-4">
+        <footer id='footer' className="text-white py-4">
             <div className="container">
                 <div className="row">
                     <div className="col-md-4">
-                        <h5>About Us</h5>
+                        <h5>Sobre nos</h5>
                         <p>
-                            We are a creative agency specializing in web design, development, and digital marketing.
-                            Our goal is to help businesses establish a strong online presence.
+                            Nos somos uma agencia criativa especializada em desenvolvimento web, design, e marketing digital. Nosso objectivo e ajudar voce a estabelecer uma forte presenca online.
                         </p>
                     </div>
                     <div className="col-md-4">
-                        <h5>Quick Links</h5>
+                        <h5>Atalhos</h5>
                         <ul className="list-unstyled">
                             <li><a href="/" className="text-white">Home</a></li>
                             <li><a href="/services" className="text-white">Services</a></li>
@@ -25,11 +24,11 @@ const Footer = () => {
                         </ul>
                     </div>
                     <div className="col-md-4">
-                        <h5>Contact Us</h5>
+                        <h5>Cotactos</h5>
                         <ul className="list-unstyled">
-                            <li><i className="fas fa-map-marker-alt"></i> 123 Main St, Anytown, USA</li>
-                            <li><i className="fas fa-phone"></i> (123) 456-7890</li>
-                            <li><i className="fas fa-envelope"></i> info@yourcompany.com</li>
+                            <li><i className="fas fa-map-marker-alt"></i> Matundo, Tete, Mz</li>
+                            <li><i className="fas fa-phone"></i> +255 84 967 6207</li>
+                            <li><i className="fas fa-envelope"></i> creativeminds@gmail.com</li>
                         </ul>
                         <div className="mt-3">
                             <a href="https://www.facebook.com" className="text-white me-3"><i className="fab fa-facebook-f"></i></a>
@@ -38,8 +37,8 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-                <div className="text-center mt-3">
-                    <p>&copy; 2024 Your Company Name. All rights reserved.</p>
+                <div id='copiright-container' className="text-center mt-3">
+                    <p>&copy; 2024 Creative minds Lda. Todos direitos reservados.</p>
                 </div>
             </div>
         </footer>
