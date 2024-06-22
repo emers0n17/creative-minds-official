@@ -1,4 +1,5 @@
 import AboutUs from "./components/about/about"
+import Planes from "./components/contacts/Planes"
 import Equipe from "./components/equipe/equipe"
 import Footer from "./components/footer/footer"
 import Home from "./components/home/home"
@@ -14,6 +15,7 @@ function App() {
       <Servicos />
       <Portfolio />
       <Equipe />
+      <Planes />
       <Footer />
     </>
   )

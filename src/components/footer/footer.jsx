@@ -23,7 +23,7 @@ const Footer = () => {
                             <li><a href="/contact" className="text-white">Contact</a></li>
                         </ul>
                     </div>
-                    <div className="col-md-4">
+                    <div id='lista2' className="col-md-4">
                         <h5>Cotactos</h5>
                         <ul className="list-unstyled">
                             <li><i className="fas fa-map-marker-alt"></i> Matundo, Tete, Mz</li>

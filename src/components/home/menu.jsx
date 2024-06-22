@@ -1,5 +1,6 @@
 import './conteudo.css'
 import logo from "../../assets/logo.jpg";
+// import plus from "../../assets/menu.png";
 
 
 export default function Menu() {
@@ -19,40 +20,38 @@ export default function Menu() {
           aria-label="Toggle navigation"
         >
           <span id="navbar-toggler-icon" className=" navbar-toggler-icon " >
-            <div></div>
-            <div></div>
-            <div></div>
+
           </span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a className="nav-link" aria-current="page" href="#sobre">
+              <a className="nav-link" aria-current="page" href="#">
                 Inicio
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" aria-current="page" href="#sobre">
+              <a className="nav-link" aria-current="page" href="#sobre-nos">
+                Sobre
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" aria-current="page" href="#container-fluid">
                 Servicos
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" aria-current="page" href="#sobre">
-                Trabalhos
+              <a className="nav-link" aria-current="page" href="#portfolio-section">
+                Portfolio
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" aria-current="page" href="#sobre">
+              <a className="nav-link" aria-current="page" href="#equipe">
                 Equipe
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" aria-current="page" href="#sobre">
-                Planos
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" aria-current="page" href="#sobre">
+              <a className="nav-link" aria-current="page" href="#planes-section">
                 Contactos
               </a>
             </li>
