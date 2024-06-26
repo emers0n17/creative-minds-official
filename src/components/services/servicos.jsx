@@ -2,8 +2,9 @@
 import React from 'react';
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import CardServico from './CardServico';
-import card1 from '../../assets/ui-ux-designers-isometric-composition-with-small-people-creating-custom-design-web-site-3d-vector-illustration.png';
-import card2 from '../../assets/organic-flat-computer-programming-illustration.png';
+import webDevelopment from '../../assets/organic-flat-computer-programming-illustration.png';
+import design from '../../assets/low-code-development-concept-illustration.png';
+import marketing from '../../assets/dados-informam-o-conceito-de-ilustracao.png';
 import './servicos.css';
 
 function Servicos() {
@@ -18,23 +19,23 @@ function Servicos() {
         <CardServico 
           precoTitulo1="Site dinâmico" preco1="10 000" 
           precoTitulo2="Aplicação web" preco2="30 000" 
-          background="#6a00ff" imagem={card2} 
+          background="#6a00ff" imagem={webDevelopment} 
           descricao="Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ipsa optio dignissimos doloremque voluptate, officiis aliquid, neque reprehenderit ea, odio sit quis cumque sequi debitis a enim mollitia blanditiis sapiente!" 
           titulo="Desenvolvimento Web" 
         />
         <CardServico 
           precoTitulo1="Cartaz" preco1="2 500" 
           precoTitulo2="Mockup" preco2="15 000" 
-          background="#6a00ff" imagem={card1} 
+          background="#6a00ff" imagem={design} 
           descricao="Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ipsa optio dignissimos doloremque voluptate, officiis aliquid, neque reprehenderit ea, odio sit quis cumque sequi debitis a enim mollitia blanditiis sapiente!" 
           titulo="Design" 
         />
         <CardServico 
           precoTitulo1="Site dinâmico" preco1="10 000" 
           precoTitulo2="Aplicação web" preco2="30 000" 
-          background="#6a00ff" imagem={card1} 
+          background="#6a00ff" imagem={marketing} 
           descricao="Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ipsa optio dignissimos doloremque voluptate, officiis aliquid, neque reprehenderit ea, odio sit quis cumque sequi debitis a enim mollitia blanditiis sapiente!" 
-          titulo="Desenvolvimento Web" 
+          titulo="Marketing" 
         />
       </div>
     </section>
