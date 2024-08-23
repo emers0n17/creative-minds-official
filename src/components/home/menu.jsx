@@ -1,5 +1,5 @@
 import './conteudo.css'
-import logo from "../../assets/logo.jpg";
+import logo from "../../assets/logo.png";
 // import plus from "../../assets/menu.png";
 
 
@@ -55,9 +55,9 @@ export default function Menu() {
                 Contactos
               </a>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <button>Tema</button>
-            </li>
+            </li> */}
           </ul>
         </div>
       </nav>

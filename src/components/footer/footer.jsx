@@ -9,7 +9,7 @@ const Footer = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-md-4">
-                        <h5>Sobre nos</h5>
+                        <h5>Sobre</h5>
                         <p>
                             Nos somos uma agencia criativa especializada em desenvolvimento web, design, e marketing digital. Nosso objectivo e ajudar voce a estabelecer uma forte presenca online.
                         </p>
@@ -24,7 +24,7 @@ const Footer = () => {
                         </ul>
                     </div>
                     <div id='lista2' className="col-md-4">
-                        <h5>Cotactos</h5>
+                        <h5>Contactos</h5>
                         <ul className="list-unstyled">
                             <li><i className="fas fa-map-marker-alt"></i> Matundo, Tete, Mz</li>
                             <li><i className="fas fa-phone"></i> +255 84 967 6207</li>
@@ -38,7 +38,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div id='copiright-container' className="text-center mt-3">
-                    <p>&copy; 2024 Creative minds Lda. Todos direitos reservados.</p>
+                    <p><i>&copy; 2024 Creative minds Lda. Todos direitos reservados.</i></p>
                 </div>
             </div>
         </footer>

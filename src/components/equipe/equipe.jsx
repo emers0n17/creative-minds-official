@@ -15,7 +15,7 @@ const Equipe = () => {
     return (
         <section id="equipe" className="py-5">
             <div id='container-equipe' className="container">
-                <h2 id='equipe-header' className="text-center mb-4">Nossa Equipe</h2>
+                <h2 id='equipe-header' style={{color: '#91e646 !important'}} className="text-center mb-4">Nossa Equipe</h2>
                 <div className="row">
                     {funcionarios.map((funcionario, index) => (
                         <div key={index} className="col-md-6 text-center">

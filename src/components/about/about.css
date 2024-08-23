@@ -1,11 +1,12 @@
 #sobre-nos {
-    background-color: rgb(172, 84, 255);
+    /* background-color: rgb(172, 84, 255); */
+    background-color: rgb(228, 228, 228);
 }
 
 #container {
     background-color: white;
     box-shadow: 0 0 2px black;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 #sobre-nos .text-primary {
@@ -22,9 +23,9 @@
     height: 96%;
     width: 8px;
     margin: 2% 5px;
-    background-image: linear-gradient(to bottom, purple, violet, yellow);
+    background-image: linear-gradient(to bottom, #91e646,#353d47);
     position: absolute;
-    border-radius: 5px;
+    border-radius: 10px;
     border: 1px solid rgba(0, 0, 0, 0.3);
     z-index: 0;
     top: 0;
@@ -33,7 +34,7 @@
 
 #description p{
     box-shadow: 0 0 5px rgb(0, 0, 0, 0.4);
-    border-radius: 5px;
+    border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,23 +45,24 @@
 #description h2 {
     text-align: center;
     margin-top: 10px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
     font-weight: 900;
 }
 
 #description p:nth-child(3),
 #description p:nth-child(5){
-    background-color: white;
-    border-bottom: 1px solid crimson;
+    background-color: #91e646;
+    border-bottom: 1px solid #353d47;
     margin-left: 20px;
     margin-right: 10px;
+    color: white;
 }
 
 #description p:nth-child(2),
 #description p:nth-child(4){
-    background-color: #0478b1ff;
+    background-color: #353d47;
     color: white;
-    border-bottom: 1px solid rgb(0, 106, 255);
+    border-bottom: 1px solid #91e646;
     margin-right: 20px;
     position: relative;
 }
@@ -73,7 +75,7 @@
     /* box-shadow: 0 0 20px #0478b1ff;
     color: white; */
     border-radius: 100%;
-    background-color: #0478b1ff;
+    background-color: #353d47;
     color: white;
     border: 1px solid rgba(0, 0, 0, 0.1);
     position: absolute;
@@ -87,7 +89,7 @@
     content: '';
     width: 20px;
     height: 10px;
-    background-color: #0478b1ff;
+    background-color: #353d47;
     color: white;
     z-index: 2;
     border-bottom: 1px solid rgba(0, 0, 0, 0.3);
@@ -101,11 +103,32 @@
 #sobre-nos p {
     line-height: 1.6;
     margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    line-height: 24px;
+    align-items: flex-start;
 }
 
 #sobre-nos img {
     transition: transform 0.3s ease;
-    max-width: 100% ;
+    max-width: 50% ;
+}
+
+.about-title {
+    margin-bottom: 16px;
+    width: 100px;
+    padding: 10px;
+    min-height: 40px;
+    color: black;
+    font-weight: bolder;
+    font-size: 14px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: white;
+    border-radius: 10px;
 }
 
 /* #sobre-nos img:hover {

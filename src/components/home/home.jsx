@@ -66,13 +66,13 @@ const App = () => {
       },
       particles: {
         color: {
-          value: '#000000',
+          value: '#f4fcec',
         },
         links: {
-          color: '#000000',
-          distance: 150,
+          color: '#f4fcec',
+          distance: 130,
           enable: true,
-          opacity: 0.6,
+          opacity: 0.7,
           width: 1,
         },
         move: {
@@ -95,7 +95,7 @@ const App = () => {
           value: 1,
         },
         shape: {
-          type: 'triangle',
+          type: 'circle',
         },
         size: {
           value: { min: 3, max: 5 },
@@ -127,10 +127,9 @@ function Apresentacao_start() {
         <div style={{
           height: '200px',
         }} className="container-fluid">
-        <h1>Design, Criacao e Gerenciamento de sites?</h1>
+        <h1><span id="span-branco">Agência</span> <span id="span-verde">Paisana</span></h1>
         <p>
-          Você esta no lugar certo, aqui nos iremos dar a acessoria necessaria
-          para que você dê os seus primeiros passos na internet.
+        A Paisana é a agência que vai te ajudar a alcançar seus objetivos de <span id="span-verde">marketing</span> e impulsionar o seu negócio. 
         </p>
         </div>
       </div>

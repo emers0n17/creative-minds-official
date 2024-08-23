@@ -2,16 +2,16 @@
 import React from 'react';
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import CardServico from './CardServico';
-import webDevelopment from '../../assets/organic-flat-computer-programming-illustration.png';
-import design from '../../assets/low-code-development-concept-illustration.png';
-import marketing from '../../assets/dados-informam-o-conceito-de-ilustracao.png';
+import webDevelopment from '../../assets/website-creator-concept-illustration.png';
+import design from '../../assets/flat-design-rebranding-illustration.png';
+import marketing from '../../assets/hand-drawn-illustration-people-with-smartphone-marketing.png';
 import './servicos.css';
 
 function Servicos() {
   return (
-    <section id="container-fluid">
-      <div id='container-fluid-hedaer' className="container text-center">
-        <h1>Serviços</h1>
+    <section id="container-fluid" >
+      <div id='container-fluid-hedaer' style={{backgroundColor: '#353d47'}} className="container text-center">
+        <h1 style={{color: '#91e646'}}>Serviços</h1>
         <p>Confira os serviços que temos disponíveis no momento</p>
       </div>
 

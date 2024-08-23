@@ -11,12 +11,13 @@
 }
 
 #container-fluid {
-    background-image: linear-gradient(to bottom, rgb(172, 84, 255), purple);
+    /* background-image: linear-gradient(to bottom, rgb(172, 84, 255), purple); */
+    /* background-color: rgb(228, 228, 228); */
+    background-image: linear-gradient(to bottom, rgb(228, 228, 228), rgb(128, 128, 128));
 }
 
 #container-fluid-hedaer {
     min-height: 200px;
-    background-color: #0478b1ff;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -67,7 +68,12 @@
     margin: 5px;
     border-radius: 5px;
     /* background-image: linear-gradient(150deg, rgb(144, 0, 255), rgb(255, 0, 106)); */
-    background-color: #ff735cff;
+    background-color:  #353d47;
+    /* #91e646,#353d47 */
+}
+
+.img-tamanho {
+    max-width: 70%;
 }
 
 #prices-desc a {
@@ -112,11 +118,11 @@
     width: 100%;
     min-height: 150px;
     line-height: 1.5;
-    background-color: #ff735cff;
+    background-color: white;
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-    color: white !important;
+    color: color !important;
     text-align: justify;
 }
 

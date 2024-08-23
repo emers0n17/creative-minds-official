@@ -32,6 +32,7 @@
     border-bottom: 1px solid grey;
     position: relative;
     z-index: 2;
+    position: fixed;
 }
 
 
@@ -117,7 +118,8 @@
 /* Conteiner de apresentacao */
 #container-start-home {
     /* background-color: #ff073dff; */
-    background-image: linear-gradient(to bottom, orangered, crimson, rgb(172, 84, 255));
+    /* background-image: linear-gradient(to bottom, orangered, crimson, rgb(172, 84, 255)); */
+    background: rgba(228, 228, 228);
     height: 700px;
     display: flex;
     align-items: center;
@@ -128,14 +130,14 @@
 .apresentation-start {
     z-index: 0;
     border-radius: 2px;
-    background-color: white;
-    border-radius: 5px;
-    border: 8px;
+    background-color: #363c46;
+    border-radius: 12px;
+    border: 10px;
     border: 1px solid var(--border-glace);
     backdrop-filter: blur(20px);
     user-select: none;
     padding: 10px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.6);
     min-height: 350px;
     max-width: 800px;
     position: relative;
@@ -144,13 +146,20 @@
 }
 
 .apresentation-start h1 {
-    font-size: clamp(1rem, 1rem + 2vw ,4rem);
-    color: crimson;
+    font-size: 44px;
     padding: 10px;
     font-weight: 700;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     z-index: 1;
     position: relative;
+}
+
+#span-branco {
+    color: white !important;
+}
+
+#span-verde {
+    color: #8ce140 !important;
 }
 
 /* .apresentation-start h1::after {
@@ -166,7 +175,9 @@
 
 .apresentation-start p {
     /* color: rgb(63, 63, 63); */
-    font-size: clamp(1rem, 1rem + 2vw ,1.5rem);
+    font-size: 20px;
+    line-height: 30px;
+    color: white;
     padding: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }

@@ -10,10 +10,11 @@ const CardServico = ({ imagem, titulo, descricao, precoTitulo1, preco1, precoTit
     <div
     id='row'
       className="row"
+      // style={{marginBottom: '100px'}}
     >
       <div id='containerImagen' className="col-md-6">
         <img
-          className="img-fluid"
+          className="img-tamanho"
           src={imagem}
           alt={titulo}
         />
