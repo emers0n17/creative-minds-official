@@ -51,8 +51,8 @@ export default function Menu() {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" aria-current="page" href="#planes-section">
-                Contactos
+              <a className="nav-link" aria-current="page" href="#fundo-plane">
+                Planos
               </a>
             </li>
             {/* <li className="nav-item">
