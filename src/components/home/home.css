@@ -14,11 +14,11 @@
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     height: auto;
     /* background-color: rgb(40, 42, 53); */
-    background-color:  rgb(172, 84, 255);
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 0 !important;
+    background-color: rgb(228, 228, 228);
     min-height: 100vh;
 }
 

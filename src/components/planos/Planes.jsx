@@ -62,17 +62,17 @@ function Planes() {
   ];
 
   return (
-    <div id="fundo-plane" className="container-fluid bg-dark text-light py-5">
-      <div className="container">
+    <div id="fundo-plane" className="container-fluid text-light py-5">
+      <div  className="container">
         <h2 className="text-center mb-5">Pacote de Campanha de Publicidade</h2>
         <div className="row">
           {plans.map((plan, index) => (
             <div key={index} className="col-md-3 mb-4">
-              <div className="card bg-secondary text-light shadow-sm h-100">
-                <div className="card-header text-center">
+              <div id="planes-card" className="card bg-secondary text-light shadow-sm h-100">
+                <div id="planes-card-header" className="card-header text-center">
                   <h4>{plan.name}</h4>
                 </div>
-                <div className="card-body">
+                <div id="planes-card-body" className="card-body">
                   <ul className="list-unstyled">
                     {plan.features.map((feature, index) => (
                       <li key={index} className="mb-2">
@@ -82,9 +82,9 @@ function Planes() {
                     ))}
                   </ul>
                 </div>
-                <div className="card-footer text-center">
-                  <p className="mb-1"><del>{plan.price}</del></p>
-                  <h4>{plan.discountPrice}</h4>
+                <div id="planes-card-footer" className="card-footer text-center">
+                  <p id="plane-price-before" className="mb-1"><del>{plan.price}</del></p>
+                  <h4 id="plane-price-after">{plan.discountPrice}</h4>
                   <p className="mb-3">Desconto de {plan.discount}</p>
                   <button className="btn btn-primary">
                     Contratar
@@ -98,13 +98,8 @@ function Planes() {
     Criar Pacote Personalizado
   </button>
 </div>
-        </div>
-      </div>
-    </div>
-  );
-
   {/* Modal */}
-<div className="modal fade" id="customPackageModal" tabIndex="-1" aria-labelledby="customPackageModalLabel" aria-hidden="true">
+  <div className="modal fade" id="customPackageModal" tabIndex="-1" aria-labelledby="customPackageModalLabel" aria-hidden="true">
   <div className="modal-dialog">
     <div className="modal-content bg-dark text-light">
       <div className="modal-header">
@@ -134,6 +129,12 @@ function Planes() {
     </div>
   </div>
 </div>
+        </div>
+      </div>
+    </div>
+  );
+
+
 }
 
 
