@@ -1,9 +1,12 @@
 import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "./Planes.css";
 import certo from '../../assets/check_14025690.png';
-// import './email.js'
+import emailjs from 'emailjs-com'; // Importando o emailjs
+import { useState } from 'react';
+import { Modal, Button } from 'react-bootstrap'; // Importando Modal do Bootstrap
 
 function Planes() {
+  // Pacotes disponíveis
   const plans = [
     {
       name: "Pacote Iniciante",
@@ -58,12 +61,75 @@ function Planes() {
       price: "169,000MZN",
       discountPrice: "143,650MZN",
       discount: "15%"
+    },
+    {
+      name: "Pacote Personalizado",
+      features: [
+        "Escolha os serviços que deseja!"
+      ],
+      price: "Personalizado",
+      discountPrice: "Personalizado",
+      discount: "-"
     }
   ];
 
+  // Serviços disponíveis para o plano personalizado
+  const services = [
+    { name: "Criação de Logotipo e Identidade Visual", price: 3000 },
+    { name: "Gestão de Redes Sociais (1 mês)", price: 4000 },
+    { name: "Campanhas Publicitárias Online (1 mês)", price: 6000 },
+    { name: "Desenvolvimento de Website", price: 15000 },
+    { name: "Consultoria de Marketing", price: 8000 },
+    { name: "Branding", price: 5000 },
+    { name: "Estratégia de Marketing Digital", price: 10000 },
+    { name: "Produção de Conteúdo", price: 7000 },
+    { name: "Relações Públicas (12 meses)", price: 12000 }
+  ];
+
+  const [selectedServices, setSelectedServices] = useState([]);
+  const [totalPrice, setTotalPrice] = useState(0);
+  const [showModal, setShowModal] = useState(false);
+
+  // Função para abrir o modal do plano personalizado
+  const handlePersonalizedPlan = () => {
+    setSelectedServices([]);
+    setTotalPrice(0);
+    setShowModal(true);
+  };
+
+  // Função para lidar com a seleção de serviços
+  const handleServiceSelect = (service) => {
+    const isSelected = selectedServices.find(s => s.name === service.name);
+    if (isSelected) {
+      setSelectedServices(selectedServices.filter(s => s.name !== service.name));
+      setTotalPrice(totalPrice - service.price);
+    } else {
+      setSelectedServices([...selectedServices, service]);
+      setTotalPrice(totalPrice + service.price);
+    }
+  };
+
+  // Função para enviar os dados por email
+  const handleSubmit = (plan) => {
+    const templateParams = {
+      selected_plan: plan.name,
+      selected_services: selectedServices.map(s => s.name).join(', ') || plan.features.join(', '),
+      total_price: plan.name === "Pacote Personalizado" ? totalPrice + "MZN" : plan.discountPrice,
+      email: 'emersoncovane23@gmail.com'
+    };
+
+    emailjs.send('service_id', 'template_id', templateParams, 'user_id')
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+      }, (error) => {
+        console.log('FAILED...', error);
+      });
+    setShowModal(false);
+  };
+
   return (
     <div id="fundo-plane" className="container-fluid text-light py-5">
-      <div  className="container">
+      <div className="container">
         <h2 className="text-center mb-5">Pacote de Campanha de Publicidade</h2>
         <div className="row">
           {plans.map((plan, index) => (
@@ -86,56 +152,57 @@ function Planes() {
                   <p id="plane-price-before" className="mb-1"><del>{plan.price}</del></p>
                   <h4 id="plane-price-after">{plan.discountPrice}</h4>
                   <p className="mb-3">Desconto de {plan.discount}</p>
-                  <button className="btn btn-primary">
+                  <button className="btn btn-primary" onClick={() => {
+                    if (plan.name === "Pacote Personalizado") {
+                      handlePersonalizedPlan();
+                    } else {
+                      handleSubmit(plan);
+                    }
+                  }}>
                     Contratar
                   </button>
                 </div>
               </div>
             </div>
           ))}
-          <div className="text-center my-5">
-  <button className="btn btn-success" data-bs-toggle="modal" data-bs-target="#customPackageModal">
-    Criar Pacote Personalizado
-  </button>
-</div>
-  {/* Modal */}
-  <div className="modal fade" id="customPackageModal" tabIndex="-1" aria-labelledby="customPackageModalLabel" aria-hidden="true">
-  <div className="modal-dialog">
-    <div className="modal-content bg-dark text-light">
-      <div className="modal-header">
-        <h5 className="modal-title" id="customPackageModalLabel">Pacote Personalizado</h5>
-        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div className="modal-body">
-        <form id="customPackageForm">
-          <div className="mb-3">
-            <label htmlFor="customName" className="form-label">Nome do Pacote</label>
-            <input type="text" className="form-control" id="customName" required />
-          </div>
-          <div className="mb-3">
-            <label htmlFor="customFeatures" className="form-label">Funcionalidades</label>
-            <textarea className="form-control" id="customFeatures" rows="3" required></textarea>
-          </div>
-          <div className="mb-3">
-            <label htmlFor="customPrice" className="form-label">Preço</label>
-            <input type="text" className="form-control" id="customPrice" required />
-          </div>
-        </form>
-      </div>
-      <div className="modal-footer">
-        <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-        <button type="submit" form="customPackageForm" className="btn btn-primary">Enviar Pacote</button>
-      </div>
-    </div>
-  </div>
-</div>
         </div>
       </div>
+
+      {/* Modal para Pacote Personalizado */}
+      <Modal show={showModal} onHide={() => setShowModal(false)}>
+        <Modal.Header closeButton>
+          <Modal.Title>Escolha os Serviços</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          {services.map((service, index) => (
+            <div key={index} className="form-check">
+              <input 
+                type="checkbox" 
+                className="form-check-input" 
+                id={`service-${index}`} 
+                onChange={() => handleServiceSelect(service)}
+                checked={!!selectedServices.find(s => s.name === service.name)}
+              />
+              <label className="form-check-label" htmlFor={`service-${index}`}>
+                {service.name} - {service.price}MZN
+              </label>
+            </div>
+          ))}
+          <div className="mt-3">
+            <h5>Total: {totalPrice}MZN</h5>
+          </div>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={() => setShowModal(false)}>
+            Cancelar
+          </Button>
+          <Button variant="primary" onClick={() => handleSubmit({ name: "Pacote Personalizado", discountPrice: totalPrice + "MZN" })}>
+            Confirmar Seleção
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </div>
   );
-
-
 }
-
 
 export default Planes;
