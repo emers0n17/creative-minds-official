@@ -5,12 +5,15 @@ import Footer from "./components/footer/footer"
 import Home from "./components/home/home"
 import Portfolio from "./components/portfolio/Portfolio"
 import Servicos from "./components/services/servicos"
+import Carousel from "./components/carousel/Carousel"
+
 
 function App() {
 
   return (
     <>
       <Home />
+      <Carousel />
       <AboutUs />
       <Servicos />
       {/* <Portfolio /> */}

@@ -31,9 +31,6 @@ const CardServico = ({ imagem, titulo, descricao, precoTitulo1, preco1, precoTit
         <p id='text-description'>
           {descricao}
         </p>
-        <p id='text-description'>
-          {descricao}
-        </p>
         <div id='prices' style={{overflow: 'hidden'}} className="row">
           <div  className="col-sm-6">
             <div id='prices-desc' className="cardPreco container-fluid text-center p-3">

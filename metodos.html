@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela Interativa</title>
+    <style>
+    * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.table-container {
+    width: 60%;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #4CAF50;
+    color: white;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tbody tr:hover {
+    background-color: #ddd;
+}
+
+button {
+    margin-top: 20px;
+    display: block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+    </style>
+</head>
+<body>
+    <div class="table-container">
+        <h2>Tabela de Exemplo</h2>
+        <table id="myTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Idade</th>
+                    <th>Cidade</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Ana</td>
+                    <td>25</td>
+                    <td>Maputo</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Bruno</td>
+                    <td>30</td>
+                    <td>Beira</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Carlos</td>
+                    <td>28</td>
+                    <td>Nampula</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Diana</td>
+                    <td>22</td>
+                    <td>Tete</td>
+                </tr>
+            </tbody>
+        </table>
+        <button onclick="addRow()">Adicionar Linha</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+<script>
+    function addRow() {
+    // Obtém a referência da tabela
+    var table = document.getElementById("myTable").getElementsByTagName('tbody')[0];
+
+    // Cria uma nova linha na tabela
+    var newRow = table.insertRow();
+
+    // Adiciona células (colunas) à nova linha
+    var cell1 = newRow.insertCell(0);
+    var cell2 = newRow.insertCell(1);
+    var cell3 = newRow.insertCell(2);
+    var cell4 = newRow.insertCell(3);
+
+    // Adiciona conteúdo às células
+    cell1.innerHTML = "5";
+    cell2.innerHTML = "Elias";
+    cell3.innerHTML = "26";
+    cell4.innerHTML = "Quelimane";
+}
+
+</script>
+</html>

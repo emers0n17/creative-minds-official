@@ -20,21 +20,21 @@ function Servicos() {
           precoTitulo1="Site dinâmico" preco1="10 000" 
           precoTitulo2="Aplicação web" preco2="30 000" 
           background="#6a00ff" imagem={webDevelopment} 
-          descricao="Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ipsa optio dignissimos doloremque voluptate, officiis aliquid, neque reprehenderit ea, odio sit quis cumque sequi debitis a enim mollitia blanditiis sapiente!" 
+          descricao="Desenvolvemos sites e aplicações web profissionais, responsivos e otimizados para mecanismos de busca, ajudando sua empresa a ter uma presença digital forte e eficiente." 
           titulo="Desenvolvimento Web" 
         />
         <CardServico 
           precoTitulo1="Cartaz" preco1="2 500" 
           precoTitulo2="Mockup" preco2="15 000" 
           background="#6a00ff" imagem={design} 
-          descricao="Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ipsa optio dignissimos doloremque voluptate, officiis aliquid, neque reprehenderit ea, odio sit quis cumque sequi debitis a enim mollitia blanditiis sapiente!" 
+          descricao="Criamos designs modernos e impactantes para sua marca, incluindo logotipos, materiais gráficos e identidade visual completa que comunica a essência do seu negócio." 
           titulo="Design" 
         />
         <CardServico 
           precoTitulo1="Site dinâmico" preco1="10 000" 
           precoTitulo2="Aplicação web" preco2="30 000" 
           background="#6a00ff" imagem={marketing} 
-          descricao="Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ipsa optio dignissimos doloremque voluptate, officiis aliquid, neque reprehenderit ea, odio sit quis cumque sequi debitis a enim mollitia blanditiis sapiente!" 
+          descricao="Estabelecer Presença em Plataformas como facebook, Instagram e outras redes sociais." 
           titulo="Marketing" 
         />
       </div>

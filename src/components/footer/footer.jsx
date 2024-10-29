@@ -11,7 +11,7 @@ const Footer = () => {
                     <div className="col-md-4">
                         <h5>Sobre</h5>
                         <p>
-                            Nos somos uma agencia criativa especializada em desenvolvimento web, design, e marketing digital. Nosso objectivo e ajudar voce a estabelecer uma forte presenca online.
+                        Somos uma agência especializada em soluções digitais integradas, combinando desenvolvimento web, design criativo e marketing digital para impulsionar o crescimento do seu negócio no ambiente online.
                         </p>
                     </div>
                     <div className="col-md-4">

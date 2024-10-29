@@ -1,97 +1,122 @@
-#fundo-plane{
-    background-color: #1c1c1c; /* Fundo mais escuro para um visual moderno */
-    color: #ffffff;
-    padding-top: 40px;
-    padding-bottom: 40px;
-  }
+#fundo-plane {
+  background-color: #f8f9fa;
+  padding: 80px 0;
+}
 
-  
-  #planes-card {
-    background-color: rgb(228, 228, 228);
-    border: 1px solid rgba(28, 28, 28, 0.1);
-    border-radius: 12px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2) !important;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  #planes-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-  }
-  
-  #planes-card-header {
-    background-color: #353d47;
-    color: #8ce140;
-    font-weight: bold;
-    font-size: 1.2rem;
-    padding: 15px;
-    border-radius: 12px 12px 0 0;
-  }
+.plan-card {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
 
-  #planes-card-body {
-    background-color: white;
-    color: black;
-  }
-  
-  #planes-card-body ul {
-    padding-left: 0;
-  }
-  
-  #planes-card-body ul li {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  }
-  
-  #planes-card-footer {
-    background-color: #353d47;
-    padding: 20px;
-    border-radius: 0 0 12px 12px;
-    user-select: none;
-  }
-  
-  #planes-card-footer h4 {
-    color: #e0e0e0;
-  }
+.plan-card.recommended {
+  border: 2px solid #91e646;
+  transform: scale(1.05);
+}
 
-  #plane-price-before {
-    color: tomato;
-  }
+.plan-card.recommended::before {
+  content: 'Mais Popular';
+  position: absolute;
+  top: 20px;
+  right: -35px;
+  background: #91e646;
+  color: white;
+  padding: 8px 40px;
+  transform: rotate(45deg);
+  font-size: 14px;
+}
 
-  #plane-price-after {
-    color: lightgreen;
-    animation: aumentar 3s infinite ease;
-  }
-  
-  @keyframes aumentar {
-    0% {
-      transform: scale(1);
-      color: lightgreen;
-    }
-    50% {
-      transform: scale(1.2);
-      color: rgb(119, 205, 119);
-    }
-    100% {
-      transform: scale(1);
-      color: lightgreen;
-    }
-  }
-  
-  .btn-primary {
-    background-image: linear-gradient(to bottom, rgb(65, 207, 255), #1100ff);
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    border-radius: 12px;
-    transition: 0.3s ease;
+.plan-icon {
+  font-size: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+}
 
+.plan-card h3 {
+  color: #353d47;
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.price-container {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.original-price {
+  color: #999;
+  text-decoration: line-through;
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.discount-price {
+  color: #353d47;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.discount-badge {
+  background: #91e646;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+
+.features-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  color: #666;
+}
+
+.check-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.select-plan-btn {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  background: #353d47;
+  color: white;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.select-plan-btn:hover {
+  background: #91e646;
+  transform: translateY(-2px);
+}
+
+.select-plan-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .plan-card.recommended {
+    transform: none;
   }
   
-  .btn-primary:hover {
-    background-color: #0056b3;
-    transform: scale(1.1);
+  .plan-card {
+    margin-bottom: 30px;
   }
+}
   

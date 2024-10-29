@@ -1,0 +1,128 @@
+.carousel-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.carousel-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+}
+
+.carousel-slide {
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  transition: transform 0.5s ease;
+  background: linear-gradient(135deg, #ffffff, #f5f5f5);
+}
+
+.carousel-slide.transitioning {
+  transition: transform 0.5s ease;
+}
+
+.carousel-slide img {
+  width: 50%;
+  max-width: 500px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-right: 2rem;
+}
+
+.slide-content {
+  flex: 1;
+  color: #333333;
+  padding: 1rem;
+}
+
+.slide-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #353d47;
+  font-weight: bold;
+}
+
+.slide-content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #666666;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(53, 61, 71, 0.9);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.carousel-button:hover {
+  background: #91e646;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-button.prev {
+  left: 1rem;
+}
+
+.carousel-button.next {
+  right: 1rem;
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(53, 61, 71, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.indicator.active {
+  background: #91e646;
+  transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+  .carousel-slide {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .carousel-slide img {
+    width: 80%;
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .slide-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .slide-content p {
+    font-size: 1rem;
+  }
+} 
